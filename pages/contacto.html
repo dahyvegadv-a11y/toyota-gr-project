@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/descarga.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Contacto - Fan Page GR</title>
+</head>
+<body>
+
+<!--  HEADER  -->
+<header class="bg-black text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <img src="../assets/logo-gr-page.png"
+             alt="Logo Toyota Gazoo Racing Argentina"
+             title="Toyota Gazoo Racing Argentina"
+             class="img-fluid" style="max-height: 100px;">
+
+        <!-- Menu navegacion principal -->
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="quienessomos.html">¿Quiénes somos?</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="store.html">Store</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+<!--  FIN HEADER  -->
+
+<!--  CONT PRINCIPAL  -->
+<main class="container my-5">
+
+    <section class="mb-5">
+        <h1 class="mb-4 text-center">Contáctanos</h1>
+
+        <p class="lead text-center mb-4">
+            Queremos saber de vos, tus dudas, sugerencias y todo lo relacionado con Toyota Gazoo Racing. 
+            También te contamos que tenemos eventos exclusivos, un club de afiliados para sumar puntos y premios,
+            y tips y recomendaciones para todos los fanáticos de Toyota.
+        </p>
+
+        <!-- Formulario de contacto -->
+        <form action="#" method="post" class="mx-auto mb-5" style="max-width: 600px;">
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre completo" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Ingresa tu número de teléfono" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Ingresa tu e-mail" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="consulta" class="form-label">Consulta</label>
+                <textarea id="consulta" name="consulta" class="form-control" placeholder="Ingresá tu consulta" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100">Enviar consulta</button>
+
+        </form>
+
+        <!-- agregados fanaticos -->
+        <div class="row text-white">
+            <div class="col-md-4 mb-4">
+                <h3 class="text-danger">Eventos</h3>
+                <p>Enterate de competencias, track days y reuniones de fanáticos GR. 
+                Suscribite a nuestro newsletter para recibir invitaciones.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h3 class="text-danger">Club de Afiliados</h3>
+                <p>Sumá puntos por tus compras en nuestro Store y participá por premios exclusivos GR.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h3 class="text-danger">Tips Toyoteros</h3>
+                <p>Consejos de mantenimiento, conducción y personalización de tu GR. 
+                Consultá con nuestra comunidad y compartí tus experiencias.</p>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+<!--  FIN CONTENIDO  -->
+
+<!--  FOOTER  -->
+<footer class="bg-black text-white py-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <ul class="list-unstyled d-flex flex-column flex-md-row mb-2 mb-md-0">
+            <li class="me-md-3"><a class="text-white" href="https://www.toyota.com.ar/concesionarios" target="_blank">Concesionarios Oficiales</a></li>
+            <li class="me-md-3"><a class="text-white" href="https://www.toyota.com.ar/" target="_blank">Toyota Argentina - Página Oficial</a></li>
+            <li><a class="text-white" href="termsandconditions.html">Términos y condiciones</a></li>
+        </ul>
+        <p class="mb-0">&copy; 2026 Toyota Gazoo Racing Fan Page</p>
+    </div>
+</footer>
+<!--  FIN FOOTER  -->
+
+<!-- Bootstrap JS para que funcione como sea -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
