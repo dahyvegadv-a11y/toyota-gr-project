@@ -1,0 +1,51 @@
+// ===============================
+// HEADER + NAV
+// ===============================
+@use "variables" as *;
+
+@import '_variables';
+
+header {
+  background-color: $color-negro;
+  padding: $padding-general;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 120px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-blanco;
+      font-weight: bold;
+      transition: $transition;
+
+      &:hover {
+        color: $color-rojo-gr;
+      }
+    }
+  }
+}
+
+// Responsive Header
+@media (max-width: $tablet) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

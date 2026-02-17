@@ -1,0 +1,24 @@
+// ===============================
+// RESET GENERAL
+// ===============================
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-principal;
+  background-color: $color-gris;
+
+  color: $color-negro;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,28 @@
+// ===============================
+// FOOTER
+// ===============================
+
+footer {
+  background-color: $color-negro;
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  a {
+    color: $color-blanco;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+      color: $color-rojo-gr;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// ===============================
+// STORE PAGE
+// ===============================
+
+.store-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px;
+
+  img {
+    border-radius: $radius;
+    box-shadow: $sombra-suave;
+    transition: $transition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

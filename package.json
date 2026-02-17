@@ -1,0 +1,20 @@
+{
+  "name": "toyota-gr-page",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/dahyvegadv-a11y/toyota-GR-pages#readme",
+  "bugs": {
+    "url": "https://github.com/dahyvegadv-a11y/toyota-GR-pages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dahyvegadv-a11y/toyota-GR-pages.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

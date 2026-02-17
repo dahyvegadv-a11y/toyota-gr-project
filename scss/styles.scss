@@ -1,0 +1,26 @@
+// ===============================
+//  ARCHIVO PRINCIPAL - styles.scss
+// ===============================
+
+// Variables (siempre primero)
+@use "variables" as *;
+
+// Reset
+@use "reset";
+
+// Secciones del sitio
+@use "header";
+@use "footer";
+@use "home";
+@use "store";
+@use "contacto";
+
+// ===============================
+// Estilos generales globales
+// ===============================
+
+body {
+  font-family: $font-principal;
+  background-color: $color-negro;
+  color: $color-blanco;
+}
