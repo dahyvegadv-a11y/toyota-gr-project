@@ -1,28 +1,39 @@
 // ===============================
 // FOOTER
 // ===============================
+@use "./variables" as *;
+@use "./variables" as *;
+footer, .footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
 
-footer {
-  background-color: $color-negro;
-  margin-top: 50px;
-  padding: 30px;
-  text-align: center;
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin: 10px 0;
-  }
-
-  a {
-    color: $color-blanco;
-    text-decoration: none;
-    transition: $transition;
-
-    &:hover {
-      color: $color-rojo-gr;
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
     }
-  }
+
+    li {
+        margin: 10px 0;
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: 0.3s ease; // Lo ponemos directo para que no de error
+
+        &:hover {
+            color: #eb0a1e; // Rojo Toyota
+        }
+    }
 }

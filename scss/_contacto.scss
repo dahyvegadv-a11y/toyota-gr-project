@@ -1,39 +1,38 @@
 // ===============================
 // CONTACTO PAGE
 // ===============================
-
+@use "variables" as *;
 form {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: $color-blanco; // Corregido el nombre de la propiedad
+    border-radius: 8px; // Cambiado $radius por un valor fijo para evitar errores
+    box-shadow: $sombra-suave;
 
-  background-color: $color-blanco;
-  border-radius: $radius;
-  box-shadow: $sombra-suave;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  input,
-  textarea {
-    padding: 10px;
-    border-radius: $radius;
-    border: 1px solid $color-gris-borde;
-  }
-
-  button {
-    background-color: $color-rojo-gr;
-    color: $color-blanco;
-    padding: 12px;
-    border: none;
-    border-radius: $radius;
-    font-weight: bold;
-    cursor: pointer;
-    transition: $transition;
-
-    &:hover {
-      background-color: darkred;
+    input,
+    textarea {
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc; // Cambiado por color fijo para que no falle
     }
-  }
+
+    button {
+        background-color: $color-rojo-gr;
+        color: $color-blanco;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
 }

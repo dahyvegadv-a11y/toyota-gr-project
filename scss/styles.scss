@@ -20,7 +20,15 @@
 // ===============================
 
 body {
-  font-family: $font-principal;
-  background-color: $color-negro;
-  color: $color-blanco;
+  background-color: #000000 !important; // Negro total
+    color: #ffffff !important; 
+    font-family: sans-serif;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    animation: fadeIn 1s ease-out;
 }

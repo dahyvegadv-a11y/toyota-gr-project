@@ -1,51 +1,46 @@
-// ===============================
-// HEADER + NAV
-// ===============================
-@use "variables" as *;
-
-@import '_variables';
-
-header {
-  background-color: $color-negro;
-  padding: $padding-general;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  img {
-    width: 120px;
-  }
-
-  nav {
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    a {
-      text-decoration: none;
-      color: $color-blanco;
-      font-weight: bold;
-      transition: $transition;
-
-      &:hover {
-        color: $color-rojo-gr;
-      }
-    }
-  }
+@use "./variables" as *;
+.header {
+    background-color: #000 !important; 
+    padding: 20px;
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
 }
 
-// Responsive Header
-@media (max-width: $tablet) {
-  header {
-    flex-direction: column;
-    gap: 15px;
+.nav-link {
+    .navbar {
+    .nav-link {
+        color: white !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: $transition; // Usamos tu variable de transición
 
-    nav ul {
-      flex-direction: column;
-      align-items: center;
+        &:hover {
+            color: $color-rojo-gr !important;
+        }
     }
-  }
+
+    // Estilo del menú que cae (Dropdown)
+    .dropdown-menu {
+        background-color: $color-negro;
+        border: 1px solid $color-rojo-gr;
+        border-radius: 0; // Bordes rectos para un look más deportivo
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 20px;
+            
+            &:hover {
+                background-color: $color-rojo-gr;
+                color: white;
+            }
+        }
+    }
 }
+    
+    &:hover {
+        color: #eb0a1e !important;
+    }
+}
+

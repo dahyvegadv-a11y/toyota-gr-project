@@ -10,8 +10,12 @@
 }
 
 body {
-  font-family: $font-principal;
-  background-color: $color-gris;
+body {
+    background-color: #f4f4f4; // Un gris muy clarito (o el color que prefieras)
+    color: #333; // Color de texto para que sea legible
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
   color: $color-negro;
   line-height: 1.6;

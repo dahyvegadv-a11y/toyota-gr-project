@@ -1,7 +1,7 @@
 // ===============================
 // STORE PAGE
 // ===============================
-
+@use "variables" as *;
 .store-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -9,8 +9,8 @@
   padding: 40px;
 
   img {
-    border-radius: $radius;
-    box-shadow: $sombra-suave;
+    border-radius: 8px;
+    $sombra-suave: 0 4px 6px rgba(0,0,0,0.1);
     transition: $transition;
 
     &:hover {

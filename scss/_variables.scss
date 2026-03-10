@@ -1,12 +1,45 @@
 // ===============================
 // VARIABLES GENERALES - TOYOTA GR
 // ===============================
+@use "variables" as *;
 
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 60vh; // Altura del 60% de la pantalla
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .video-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        object-fit: cover;
+    }
+
+    .video-overlay {
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.4); // Oscurece un poco el video para leer mejor
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+}
 // 🎨 Colores principales
 $color-negro: #000000;
 $color-blanco: #ffffff;
-$color-rojo-gr: #e60012;
-$color-gris: #f2f2f2;
+$color-rojo-gr: #eb0a1e;
+$transition: 0.3s ease;
+$sombra-suave: 0 4px 6px rgba(0,0,0,0.1);
 
 // 🖋 Tipografías
 $font-principal: Arial, sans-serif;
@@ -16,3 +49,18 @@ $radius: 12px;
 
 // 🌫 Sombra suave
 $sombra-suave: 0 0 10px rgba(0, 0, 0, 0.15);
+@mixin boton-gr($color-fondo) {
+    background-color: $color-fondo;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+    }
+}
+
+// Úsalo en tus botones así:
+.btn-comprar { @include boton-gr($color-rojo-gr); }

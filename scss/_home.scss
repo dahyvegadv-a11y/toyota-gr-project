@@ -1,30 +1,86 @@
 // ===============================
 // HOME (INDEX)
 // ===============================
+@use "variables" as *;
+// ===============================
+// SECCIÓN HOME / GALERÍA
+// ===============================
 
-main {
-  padding: 30px;
-  text-align: center;
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
 }
 
-h1 {
-  font-size: 2rem;
-  margin: 20px 0;
-  color: $rojo-gr;
-  text-transform: uppercase;
-}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 
-h2 {
-  margin: 30px 0 15px;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
 
-p {
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
+    .gallery-caption {
+        position: absolute;
+        bottom: -100%; 
+        left: 0;
+        width: 100%;
+        background: rgba(235, 10, 30, 0.9); 
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        transition: bottom 0.4s ease;
+    }
 
-section {
-  margin: 40px 0;
+    &:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+        img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            bottom: 0;
+        }
+    }
+} // Esta llave cierra .gallery-item
+
+// Estilo para el banner y textos
+.lead {
+    color: #cccccc;
+    margin-top: 20px;
+}
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+
+    .video-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .video-overlay {
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5); // Capa oscura para leer el texto
+        width: 100%;
+        height: 100%;
+    }
 }
