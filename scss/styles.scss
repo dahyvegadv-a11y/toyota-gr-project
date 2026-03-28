@@ -1,29 +1,31 @@
-// ===============================
-//  ARCHIVO PRINCIPAL - styles.scss
-// ===============================
+// 1. VARIABLES
+$color-negro: #000000;
+$color-blanco: #ffffff;
+$color-rojo-gr: #eb0a1e;
+$transition: 0.3s ease;
+$font-principal: Arial, sans-serif;
 
-// Variables (siempre primero)
-@use "variables" as *;
-
-// Reset
-@use "reset";
-
-// Secciones del sitio
-@use "header";
-@use "footer";
-@use "home";
-@use "store";
-@use "contacto";
-
-// ===============================
-// Estilos generales globales
-// ===============================
+// 2. RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #000000 !important; // Negro total
-    color: #ffffff !important; 
-    font-family: sans-serif;
+  background-color: $color-negro;
+  color: $color-blanco; 
+  line-height: 1.6;
+  font-family: $font-principal;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// 3. ANIMACIONES
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -31,4 +33,146 @@ body {
 
 main {
     animation: fadeIn 1s ease-out;
+}
+
+// 4. HEADER Y NAVBAR
+.navbar {
+    .nav-link {
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: $transition;
+
+        &:hover {
+            color: $color-rojo-gr;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $color-negro;
+        border: 1px solid $color-rojo-gr;
+
+        .dropdown-item {
+            color: white;
+            padding: 10px 20px;
+            
+            &:hover {
+                background-color: $color-rojo-gr;
+                color: white;
+            }
+        }
+    }
+}
+
+// 5. HERO Y GALERÍA
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+
+    .video-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .video-overlay {
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .gallery-caption {
+        position: absolute;
+        bottom: -100%; 
+        left: 0;
+        width: 100%;
+        background: rgba(235, 10, 30, 0.9); 
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        transition: bottom 0.4s ease;
+    }
+
+    &:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+        img { transform: scale(1.1); }
+        .gallery-caption { bottom: 0; }
+    }
+}
+
+// 6. FOOTER Y STORE
+footer, .footer {
+    background-color: #000000;
+    padding: 20px;
+    border-top: 1px solid $color-rojo-gr;
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: $transition;
+
+        &:hover { color: $color-rojo-gr; }
+    }
+}
+
+.store-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px;
+
+  img {
+    border-radius: 8px;
+    transition: $transition;
+    &:hover { transform: scale(1.05); }
+  }
 }
